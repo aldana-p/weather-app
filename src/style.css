@@ -1,0 +1,89 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 54.2%,
+    rgb(21, 186, 196) 100.3%
+  );
+  background-attachment: fixed;
+}
+
+.container {
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.723);
+}
+
+.t {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  background-color: rgba(157, 157, 157, 0.25);
+  line-height: 40px;
+}
+
+.fila {
+  margin: 0px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.btn {
+  background-color: grey;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: small;
+}
+
+.btn:hover {
+  background-color: rgb(247, 198, 169);
+  border: 1px solid rgb(247, 198, 169);
+  color: grey;
+}
+.current-weather {
+  line-height: 30px;
+  max-width: 65%;
+}
+
+.additional-data {
+  line-height: 20px;
+  font-size: small;
+  max-width: 35%;
+}
+
+.todays-weather {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.unit-of-measure {
+  position: relative;
+  font-size: 16px;
+  top: -15px;
+}
+
+a.active {
+  color: black;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.col-sm {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+#city {
+  text-transform: capitalize;
+}

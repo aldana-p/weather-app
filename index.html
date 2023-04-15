@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>☁ Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/954a62eac6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AJAX with AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="searchCity">
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="city-input"
+                placeholder="Enter a city..."
+              />
+            </div>
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary" id="search">
+              Search
+            </button>
+            <button type="submit" class="btn btn-primary" id="current-city">
+              Current Location
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+      <h3>
+        <i class="fa-solid fa-location-dot fa-xs"></i>
+        <span id="city"> Córdoba, Argentina </span>
+      </h3>
+      <p id="fecha">Friday 17th</p>
+
+      <div class="row">
+        <div class="col current-weather">
+          <span class="todays-weather">
+            <i class="fa-solid fa-sun fa-xs" style="color: #eecf32"></i>
+            <span id="todays-temperature">28</span>
+            <span class="unit-of-measure">
+              <a href="#" id="celsius" class="active">°C</a>
+              /
+              <a href="#" id="fahrenheit">°F</a>
+            </span>
+          </span>
+        </div>
+        <div class="col additional-data">
+          <span id="humidity">Humidity:</span>
+          <span id="wind">Wind:</span>
+        </div>
+      </div>
+
+      <br />
+      <div class="t">
+        <div class="row row-cols-auto fila">
+          <div class="col-sm">
+            Sat<br /><i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i
+            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+          </div>
+          <div class="col-sm">
+            Sun<br /><i
+              class="fa-solid fa-cloud-rain fa-xl"
+              style="color: #617494"
+            ></i
+            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+          </div>
+          <div class="col-sm">
+            Mon<br /><i
+              class="fa-solid fa-wind fa-xl"
+              style="color: #7b8493"
+            ></i
+            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+          </div>
+          <div class="col-sm">
+            Tue<br /><i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i
+            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+          </div>
+          <div class="col-sm">
+            Wed<br /><i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i
+            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
