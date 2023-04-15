@@ -23,82 +23,93 @@
 
   <body>
     <div class="container">
-      <form id="searchCity">
-        <div class="row">
-          <div class="col">
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="city-input"
-                placeholder="Enter a city..."
-              />
+      <div class="box-weather">
+        <form id="searchCity">
+          <div class="row">
+            <div class="col-sm">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city-input"
+                  placeholder="Enter a city..."
+                />
+                <button type="submit" class="btn btn-primary" id="search">
+                  <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <button type="submit" class="btn btn-primary" id="current-city">
+                Current Location
+              </button>
             </div>
           </div>
-          <div class="col">
-            <button type="submit" class="btn btn-primary" id="search">
-              Search
-            </button>
-            <button type="submit" class="btn btn-primary" id="current-city">
-              Current Location
-            </button>
-          </div>
-        </div>
-      </form>
-      <br />
-      <h3>
-        <i class="fa-solid fa-location-dot fa-xs"></i>
-        <span id="city"> Córdoba, Argentina </span>
-      </h3>
-      <p id="fecha">Friday 17th</p>
+        </form>
+        <br />
+        <h3>
+          <i class="fa-solid fa-location-dot fa-xs"></i>
+          <span id="city"> Córdoba, Argentina </span>
+        </h3>
+        <p id="fecha">Friday 17th</p>
 
-      <div class="row">
-        <div class="col current-weather">
-          <span class="todays-weather">
-            <i class="fa-solid fa-sun fa-xs" style="color: #eecf32"></i>
-            <span id="todays-temperature">28</span>
-            <span class="unit-of-measure">
-              <a href="#" id="celsius" class="active">°C</a>
-              /
-              <a href="#" id="fahrenheit">°F</a>
+        <div class="row">
+          <div class="col current-weather">
+            <span class="todays-weather">
+              <i class="fa-solid fa-sun fa-xs" style="color: #eecf32"></i>
+              <span id="todays-temperature">28</span>
+              <span class="unit-of-measure">
+                <a href="#" id="celsius" class="active">°C</a>
+                /
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div class="col additional-data">
+            <span id="humidity">Humidity:</span>
+            <br />
+            <span id="wind">Wind:</span>
+          </div>
         </div>
-        <div class="col additional-data">
-          <span id="humidity">Humidity:</span>
-          <br />
-          <span id="wind">Wind:</span>
-        </div>
-      </div>
 
-      <br />
-      <div class="t">
-        <div class="row row-cols-auto fila">
-          <div class="col-sm">
-            Sat<br /><i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i
-            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-          </div>
-          <div class="col-sm">
-            Sun<br /><i
-              class="fa-solid fa-cloud-rain fa-xl"
-              style="color: #617494"
-            ></i
-            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-          </div>
-          <div class="col-sm">
-            Mon<br /><i
-              class="fa-solid fa-wind fa-xl"
-              style="color: #7b8493"
-            ></i
-            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-          </div>
-          <div class="col-sm">
-            Tue<br /><i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i
-            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-          </div>
-          <div class="col-sm">
-            Wed<br /><i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i
-            ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+        <br />
+        <div class="t">
+          <div class="row row-cols-auto fila">
+            <div class="col-2">
+              Sat
+              <br />
+              <i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i>
+              <br />
+              <span class="temperature"><b>34°C</b> 22°C</span>
+            </div>
+            <div class="col-2">
+              Sun<br /><i
+                class="fa-solid fa-cloud-rain fa-xl"
+                style="color: #617494"
+              ></i
+              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+            </div>
+            <div class="col-2">
+              Mon<br /><i
+                class="fa-solid fa-wind fa-xl"
+                style="color: #7b8493"
+              ></i
+              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+            </div>
+            <div class="col-2">
+              Tue<br /><i
+                class="fa-solid fa-sun fa-xl"
+                style="color: #eecf32"
+              ></i
+              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+            </div>
+            <div class="col-2">
+              Wed<br /><i
+                class="fa-solid fa-sun fa-xl"
+                style="color: #eecf32"
+              ></i
+              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
+            </div>
           </div>
         </div>
       </div>

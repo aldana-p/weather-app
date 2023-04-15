@@ -9,35 +9,41 @@ body {
 }
 
 .container {
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+}
+.box-weather {
+  box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
+  margin: 60px auto 30px;
+  max-width: 630px;
+  padding: 40px 70px 40px;
+  border-radius: 4px;
+
   height: auto;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 20px auto;
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.723);
-  box-shadow: 11px 17px 68px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
 }
-
-.t {
-  width: 100%;
+/*
+.container {
+  width: 50%;
   height: auto;
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 10px 5px;
-  background-color: rgba(157, 157, 157, 0.25);
-  line-height: 40px;
-}
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.723);
+  box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
+}*/
 
-.fila {
-  margin: 0px;
-  text-align: center;
-  flex-shrink: 0;
-}
 .btn {
   background-color: grey;
   border: 1px solid grey;
   font-weight: bold;
-  font-size: small;
 }
 
 .btn:hover {
@@ -45,6 +51,7 @@ body {
   border: 1px solid rgb(247, 198, 169);
   color: grey;
 }
+
 .current-weather {
   line-height: 30px;
   max-width: 60%;
@@ -80,7 +87,23 @@ a.active {
   margin-left: -5px;
 }
 
-.col-sm {
+.t {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  background-color: rgba(157, 157, 157, 0.25);
+  line-height: 40px;
+}
+
+.fila {
+  margin: 0px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.col-2 {
   flex: 0 0 20%;
   max-width: 20%;
 }
