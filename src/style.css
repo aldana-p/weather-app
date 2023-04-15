@@ -16,12 +16,6 @@ body {
   margin-right: auto;
 }
 .box-weather {
-  box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
-  margin: 60px auto 30px;
-  max-width: 630px;
-  padding: 40px 70px 40px;
-  border-radius: 4px;
-
   height: auto;
   border-radius: 10px;
   margin: 20px auto;
@@ -110,4 +104,9 @@ a.active {
 
 #city {
   text-transform: capitalize;
+}
+
+.footer {
+  text-align: center;
+  font-size: small;
 }
