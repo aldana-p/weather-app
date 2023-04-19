@@ -55,7 +55,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: #545b61;
+  color: #242527;
   font-size: 16px;
   font-weight: 150;
   line-height: 19px;
@@ -76,12 +76,16 @@ li {
   font-weight: 150;
   font-size: normal;
   max-width: 40%;
-  color: #545b61;
+  color: #242527;
 }
 
 .todays-weather {
   font-size: 40px;
   font-weight: 500;
+}
+
+.todays-weather > img {
+  margin: 10px;
 }
 
 .unit-of-measure {
@@ -116,7 +120,7 @@ a.active {
 }
 
 .col-2 {
-  flex: 0 0 20%;
+  flex: 20%;
   max-width: 20%;
 }
 
@@ -133,5 +137,4 @@ img {
   filter: hue-rotate(2deg) brightness(200%);
   background-color: rgba(21, 186, 196, 0.2);
   border-radius: 20px;
-  margin: 10px;
 }
