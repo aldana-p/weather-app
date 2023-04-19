@@ -101,7 +101,8 @@ function showTemperature(response) {
   let hum = response.data.main.humidity;
   let wind = response.data.wind.speed;
   let des = response.data.weather[0].description;
-  console.log(des);
+  let iconId = response.data.weather[0].icon;
+
   let temperature = document.querySelector("#todays-temperature");
   temperature.innerHTML = temp;
   let humidity = document.querySelector("#humidity");
@@ -113,6 +114,12 @@ function showTemperature(response) {
 
   //Fecha
   formatDate(response.data.dt * 1000);
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${iconId}@2x.png`
+  );
+  icon.setAttribute("alt", des);
 }
 
 // WITH A CITY INPUT
