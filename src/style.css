@@ -10,17 +10,17 @@ body {
 
 .container {
   width: 100%;
-  max-width: 700px;
   padding-right: 30px;
   padding-left: 30px;
   margin-right: auto;
 }
 .box-weather {
+  max-width: 700px;
   height: auto;
   border-radius: 10px;
   margin: 20px auto;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.723);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
 }
 /*
@@ -44,6 +44,15 @@ body {
   background-color: rgb(247, 198, 169);
   border: 1px solid rgb(247, 198, 169);
   color: grey;
+}
+
+.date-description {
+  line-height: 5px;
+  font-size: 16px;
+}
+
+.date-description > #description {
+  text-transform: capitalize;
 }
 
 .current-weather {

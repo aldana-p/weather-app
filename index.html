@@ -49,9 +49,12 @@
         <br />
         <h3>
           <i class="fa-solid fa-location-dot fa-xs"></i>
-          <span id="city"> Córdoba, Argentina </span>
+          <span id="city"> Córdoba</span>
         </h3>
-        <p id="fecha">Friday 17th</p>
+        <div class="date-description">
+          <p id="date"></p>
+          <p id="description"></p>
+        </div>
 
         <div class="row">
           <div class="col current-weather">
@@ -59,16 +62,15 @@
               <i class="fa-solid fa-sun fa-xs" style="color: #eecf32"></i>
               <span id="todays-temperature">28</span>
               <span class="unit-of-measure">
-                <a href="#" id="celsius" class="active">°C</a>
-                /
+                <a href="#" id="celsius" class="active">°C</a> /
                 <a href="#" id="fahrenheit">°F</a>
               </span>
             </span>
           </div>
           <div class="col additional-data">
-            <span id="humidity">Humidity:</span>
+            Humidity: <span id="humidity"></span>%
             <br />
-            <span id="wind">Wind:</span>
+            Wind: <span id="wind"></span> m/s
           </div>
         </div>
 

@@ -47,8 +47,10 @@ if (city !== "") {
 
 */
 
-function formatDate() {
-  let now = new Date();
+function formatDate(timestamp) {
+  console.log(timestamp);
+  let now = new Date(timestamp);
+  console.log(now);
   let weekDays = [
     "Sunday",
     "Monday",
@@ -68,8 +70,8 @@ function formatDate() {
     min = "0" + min;
   }
 
-  let fecha = document.getElementById("fecha");
-  fecha.innerHTML = day + " " + hours + ":" + min;
+  let date = document.getElementById("date");
+  date.innerHTML = "Last updated: " + day + " " + hours + ":" + min;
 }
 
 function displayCelsiusTemp(event) {
@@ -97,15 +99,23 @@ function showTemperature(response) {
   fahrenheitLink.classList.remove("active");
   let temp = Math.round(response.data.main.temp);
   let hum = response.data.main.humidity;
-  let w = response.data.wind.speed;
+  let wind = response.data.wind.speed;
+  let des = response.data.weather[0].description;
+  console.log(des);
   let temperature = document.querySelector("#todays-temperature");
   temperature.innerHTML = temp;
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `Humidity: ${hum}%`;
-  let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${w} m/s`;
+  humidity.innerHTML = hum;
+  let windSpeed = document.querySelector("#wind");
+  windSpeed.innerHTML = wind;
+  let description = document.querySelector("#description");
+  description.innerHTML = des;
+
+  //Fecha
+  formatDate(response.data.dt * 1000);
 }
 
+// WITH A CITY INPUT
 function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
@@ -122,10 +132,11 @@ function searchCity(event) {
 
 function showCurrentCity(response) {
   let citySpan = document.querySelector("#city");
-  console.log(response.data.name);
+  //console.log(response.data.name);
   citySpan.innerHTML = response.data.name;
 }
 
+//CURRENT LOCATION BTN
 function showPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
@@ -134,9 +145,6 @@ function showPosition(position) {
   axios.get(apiUrl).then(showCurrentCity);
   axios.get(apiUrl).then(showTemperature);
 }
-
-//Fecha
-formatDate();
 
 //Paso de unidades
 let celsiusLink = document.querySelector("#celsius");
