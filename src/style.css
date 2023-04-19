@@ -128,3 +128,10 @@ a.active {
   text-align: center;
   font-size: small;
 }
+
+img {
+  filter: hue-rotate(2deg) brightness(200%);
+  background-color: rgba(21, 186, 196, 0.2);
+  border-radius: 20px;
+  margin: 10px;
+}
