@@ -87,6 +87,9 @@ li {
 .todays-weather > img {
   margin: 10px;
 }
+#todays-temperature {
+  margin-left: 20px;
+}
 
 .unit-of-measure {
   position: relative;
