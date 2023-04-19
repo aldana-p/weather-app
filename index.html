@@ -33,6 +33,7 @@
                   class="form-control"
                   id="city-input"
                   placeholder="Enter a city..."
+                  autocomplete="off"
                 />
                 <button type="submit" class="btn btn-primary" id="search">
                   <i class="fa-solid fa-magnifying-glass fa-xs"></i>
@@ -52,8 +53,10 @@
           <span id="city"> Córdoba</span>
         </h3>
         <div class="date-description">
-          <p id="date"></p>
-          <p id="description"></p>
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
         </div>
 
         <div class="row">
@@ -72,6 +75,7 @@
             </span>
           </div>
           <div class="col additional-data">
+            <br />
             Humidity: <span id="humidity"></span>%
             <br />
             Wind: <span id="wind"></span> m/s
@@ -79,51 +83,13 @@
         </div>
 
         <br />
-        <div class="t">
-          <div class="row row-cols-auto fila">
-            <div class="col-2">
-              Sat
-              <br />
-              <i class="fa-solid fa-sun fa-xl" style="color: #eecf32"></i>
-              <br />
-              <span class="temperature"><b>34°C</b> 22°C</span>
-            </div>
-            <div class="col-2">
-              Sun<br /><i
-                class="fa-solid fa-cloud-rain fa-xl"
-                style="color: #617494"
-              ></i
-              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-            </div>
-            <div class="col-2">
-              Mon<br /><i
-                class="fa-solid fa-wind fa-xl"
-                style="color: #7b8493"
-              ></i
-              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-            </div>
-            <div class="col-2">
-              Tue<br /><i
-                class="fa-solid fa-sun fa-xl"
-                style="color: #eecf32"
-              ></i
-              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-            </div>
-            <div class="col-2">
-              Wed<br /><i
-                class="fa-solid fa-sun fa-xl"
-                style="color: #eecf32"
-              ></i
-              ><br /><span class="temperature"><b>34°C</b> 22°C</span>
-            </div>
-          </div>
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
 
       <div class="footer">
-        <a href="https://github.com/aldana-p/weather-app" target="_blank"
-          >Open-source code</a
-        >
+        <a href="https://github.com/aldana-p/weather-app" target="_blank">
+          Open-source code
+        </a>
         by Aldana Prieto
       </div>
       <script src="src/script.js"></script>

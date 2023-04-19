@@ -46,12 +46,22 @@ body {
   color: grey;
 }
 
-.date-description {
-  line-height: 5px;
-  font-size: 16px;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.date-description > #description {
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #545b61;
+  font-size: 16px;
+  font-weight: 150;
+  line-height: 19px;
+}
+
+#description::first-letter {
   text-transform: capitalize;
 }
 
@@ -62,8 +72,11 @@ body {
 
 .additional-data {
   line-height: 20px;
+  font-size: 16px;
+  font-weight: 150;
   font-size: normal;
   max-width: 40%;
+  color: #545b61;
 }
 
 .todays-weather {
@@ -90,7 +103,7 @@ a.active {
   margin-left: -5px;
 }
 
-.t {
+.weather-forecast {
   width: 100%;
   height: auto;
   border-radius: 15px;
@@ -98,10 +111,6 @@ a.active {
   padding: 10px 5px;
   background-color: rgba(157, 157, 157, 0.25);
   line-height: 40px;
-}
-
-.fila {
-  margin: 0px;
   text-align: center;
   flex-shrink: 0;
 }
